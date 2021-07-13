@@ -2,6 +2,7 @@
 
 ![소개](resource/01.png)
 길드원들의 레이드 일정을 관리하기 위한 투표 사이트에 대한 소개 문서입니다.
+
 https://dneifiend.github.io/lostark-guild-vote
 
 ---
