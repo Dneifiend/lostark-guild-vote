@@ -21,7 +21,10 @@
 </html>
 
 <script>
-    var googleURL = 'https://script.google.com/macros/s/'
-    var sub = window.location.href.substr(window.location.href.indexOf('?')+1)
-    document.querySelector('#root-frame').src = googleURL + sub
+    if(window.location.href !== "https://dneifiend.github.io/lostark-guild-vote/"){
+        var googleURL = 'https://script.google.com/macros/s/'
+        var sub = window.location.href.substr(window.location.href.indexOf('?')+1)
+        document.querySelector('#root-frame').src = googleURL + sub
+    }
+    
 </script>
