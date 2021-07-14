@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,26 +13,21 @@
             border: 1px solid black !important;
         }
 
-        body,
-    input {
-        font-family: "Nanum Gothic" !important;
-    }
+        #content {
+            background-color: white;
+            padding: 2rem 1rem;
+            border-radius: 0.5rem;
+        }
 
-    #content{
-        background-color: white;
-        padding: 2rem 1rem;
-        border-radius: 0.5rem;
-    }
+        body {
+            padding: 20px;
+            background-color: rgb(182, 213, 207) !important;
+            background: url('https://dneifiend.github.io/storage/lostark/%EB%AA%A8%EC%95%BC%ED%98%B8.jpg') rgb(182, 213, 207);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
 
-    body {
-        padding: 20px;
-        background-color: rgb(182, 213, 207) !important;
-        background: url('https://dneifiend.github.io/storage/lostark/%EB%AA%A8%EC%95%BC%ED%98%B8.jpg') rgb(182, 213, 207);
-        background-position: right bottom;
-        background-repeat: no-repeat;
-        background-attachment:fixed;
-
-    }
+        }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -42,16 +38,16 @@
     </script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.js"></script> -->
 
-            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
-  
+
     <!-- alert https://sweetalert2.github.io/ -->
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
@@ -64,19 +60,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <div class="row">
             <div id="content" class="col"></div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
 
 
 <script>
-var txt=`# 레이드 일정 투표
+    var txt = `
+# 레이드 일정 투표
 
 길드원들의 레이드 일정을 관리하기 위한 투표 사이트에 대한 소개 문서입니다.
 
@@ -160,11 +159,11 @@ var txt=`# 레이드 일정 투표
 * 하단 메뉴
   * 저장하기 : 투표 결과를 저장합니다. 저장하기를 눌러야만 결과가 반영됩니다. 저장 후 다음 투표 페이지 접속 시 자동으로 캐릭터 투표정보를 불러옵니다.
   * 투표결과 : 투표결과 페이지로 이동합니다.
-  * 시트 : 기존 사용하던 구글 스프레드시트로 이동합니다. 정리된 표로 투표 현황을 확인할 수 있습니다.`
+  * 시트 : 기존 사용하던 구글 스프레드시트로 이동합니다. 정리된 표로 투표 현황을 확인할 수 있습니다.
+`
 
-  var converter = new showdown.Converter();
+    var converter = new showdown.Converter();
     converter.setFlavor('github')
-    var html      = converter.makeHtml(txt);
+    var html = converter.makeHtml(txt);
     document.querySelector('#content').innerHTML = html
-
 </script>
