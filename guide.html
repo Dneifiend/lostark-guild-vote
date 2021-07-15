@@ -1152,6 +1152,29 @@
     var converter = new showdown.Converter();
     converter.setFlavor('github')
     converter.setOption('completeHTMLDocument', true)
-    var html = converter.makeHtml(txt);
-    document.querySelector('#content').innerHTML = html
+
+    function renderGuide(){
+      fetch('https://dneifiend.github.io/lostark-guild-vote/README.md')
+      .then(res=>res.text())
+      .then(guideMD=>{
+        var html = converter.makeHtml(guideMD);
+      document.querySelector('#content').innerHTML = html
+      })
+    }
+
+    function renderUpdate(){
+      fetch('https://dneifiend.github.io/lostark-guild-vote/updatenote.md')
+      .then(res=>res.text())
+      .then(guideMD=>{
+        var html = converter.makeHtml(guideMD);
+      document.querySelector('#content').innerHTML = html
+      })
+    }
+
+    if(document.location.href.includes('update')){
+      renderUpdate()
+    }
+    else{
+      renderGuide()
+    }
 </script>
