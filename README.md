@@ -2,6 +2,7 @@
 
 > 길드원들의 레이드 일정을 관리하기 위한 투표 사이트에 대한 소개 문서입니다.
 > 투표 링크 : https://dneifiend.github.io/lostark-guild-vote
+> 최근 업데이트 목록 : https://dneifiend.github.io/lostark-guild-vote/guide.html?update
 
 
 
