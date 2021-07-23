@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://dneifiend.github.io/storage/lostark/ico_mococo.png">
+    <style>
+        body,html,
+        iframe {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+            width: 100%;
+            height:100%;
+        }
+        body{
+            background-color: red;
+        }
+    </style>
+    <title>체다와캔따개들 | 레이드 투표</title>
+</head>
+<body>
+
+    <style>
+        /* 로딩스플래시 */
+     
+     
+             .splash {
+                 width: 100%;
+                 height: 100%;
+                 background: url(https://dneifiend.github.io/lostark-guild-vote/resource/loading.png) no-repeat center;
+                 /* background: url('2loading.png') no-repeat center; */
+                 /* background: url('emot_001.gif') no-repeat center; */
+                 background-color: rgb(255, 209, 209);
+                 /* background-color: rgb(182, 213, 207); */
+                 background-size: contain;
+                 position: absolute;
+                 z-index: 999999 !important;
+                 margin: 0;
+                 padding: 0;
+             }
+     
+             .splash .title {
+                 margin: 0px;
+             }
+     
+             @keyframes fadeOut {
+                 0% {
+                     opacity: 1;
+                 }
+     
+                 100% {
+                     opacity: 0;
+                 }
+             }
+     
+             .fade-out {
+                 animation-name: fadeOut;
+                 animation-duration: 0.5s;
+                 animation-timing-function: ease;
+                 animation-fill-mode: both;
+             }
+     
+             .loading-container {
+                 height: 100vh;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+             }
+     
+     
+             .loading {
+                 display: flex;
+                 flex-direction: row;
+             }
+     
+     
+             .loading__letter {
+                 font-size: 4rem;
+                 font-weight: normal;
+                 letter-spacing: 0.2rem;
+                 text-transform: uppercase;
+                 font-family: 'Single Day', cursive;
+                 color: white;
+                 animation-name: bounce;
+                 animation-duration: 2s;
+                 animation-iteration-count: infinite;
+             }
+     
+             @media (min-width: 0px) and (max-width: 370px) {
+               .loading__letter {
+                 font-size : 2rem;
+               }
+             }
+     
+             .loading__letter:nth-child(2) {
+                 animation-delay: .1s;
+             }
+     
+             .loading__letter:nth-child(3) {
+                 animation-delay: .2s;
+             }
+     
+             .loading__letter:nth-child(4) {
+                 animation-delay: .3s;
+             }
+     
+             .loading__letter:nth-child(5) {
+                 animation-delay: .4s;
+             }
+     
+             .loading__letter:nth-child(6) {
+                 animation-delay: .5s;
+             }
+     
+             .loading__letter:nth-child(7) {
+                 animation-delay: .6s;
+             }
+     
+             .loading__letter:nth-child(8) {
+                 animation-delay: .8s;
+             }
+     
+             .loading__letter:nth-child(9) {
+                 animation-delay: 1s;
+             }
+     
+             .loading__letter:nth-child(10) {
+                 animation-delay: 1.2s;
+             }
+     
+             @keyframes bounce {
+                 0% {
+                     transform: translateY(0px)
+                 }
+     
+                 40% {
+                     transform: translateY(-2rem);
+                 }
+     
+                 80%,
+                 100% {
+                     transform: translateY(0px);
+                 }
+             }
+     
+     </style>
+     
+     <div class="splash loading-container">
+       <div class="loading">
+           <div class="loading__letter">체</div>
+           <div class="loading__letter">다</div>
+           <div class="loading__letter">와</div>
+           <div class="loading__letter">캔</div>
+           <div class="loading__letter">따</div>
+           <div class="loading__letter">개</div>
+           <div class="loading__letter">들</div>
+           <div class="loading__letter">.</div>
+           <div class="loading__letter">.</div>
+           <div class="loading__letter">.</div>
+       </div>
+     </div>
+     
+     <script>
+       function loadingScreenOff(){
+         document.querySelector('.loading-container').classList.add('fade-out')
+         setTimeout(() => {
+           document.querySelector('.loading-container').remove()
+         }, 1000 * 0.5);
+       }
+     </script>
+
+
+    <iframe onload="loadingScreenOff()" id="root-frame" style="display: block;" src="https://script.google.com/macros/s/AKfycbwOyCZMCZtaeo6Xy-ytjm7iOQvnX3y3WaNt-lYWhWkzMRigl4_uqeL33zwXM9mVS8haRA/exec?page=StartVote"></iframe>
+</body>
+</html>
+
+<script>
+    
+    if(window.location.href !== "https://dneifiend.github.io/lostark-guild-vote/"){
+        var googleURL = 'https://script.google.com/macros/s/'
+        var sub = window.location.href.substr(window.location.href.indexOf('?')+1)
+        document.querySelector('#root-frame').src = googleURL + sub
+    }
+    
+</script>
