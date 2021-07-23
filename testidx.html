@@ -169,7 +169,7 @@
          }, 1000 * 0.5);
        }
      </script>
-    <iframe onload="loadingScreenOff()" id="root-frame" style="display: block;" src="https://script.google.com/macros/s/AKfycbwOyCZMCZtaeo6Xy-ytjm7iOQvnX3y3WaNt-lYWhWkzMRigl4_uqeL33zwXM9mVS8haRA/exec?page=StartVote"></iframe>
+    <iframe id="root-frame" style="display: block;" src="https://script.google.com/macros/s/AKfycbwOyCZMCZtaeo6Xy-ytjm7iOQvnX3y3WaNt-lYWhWkzMRigl4_uqeL33zwXM9mVS8haRA/exec?page=StartVote"></iframe>
 </body>
 </html>
 
@@ -179,5 +179,11 @@
         var sub = window.location.href.substr(window.location.href.indexOf('?')+1)
         document.querySelector('#root-frame').src = googleURL + sub
     }
+
+    window.addEventListener('message', event=>{
+        if(event.data === "loaded"){
+            loadingScreenOff()
+        }
+    })
     
 </script>
