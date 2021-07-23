@@ -76,7 +76,7 @@
      
      
              .loading__letter {
-                 font-size: 4rem;
+                 font-size: min(4rem, 10vw);
                  font-weight: normal;
                  letter-spacing: 0.2rem;
                  text-transform: uppercase;
@@ -87,11 +87,6 @@
                  animation-iteration-count: infinite;
              }
      
-             @media (min-width: 0px) and (max-width: 370px) {
-               .loading__letter {
-                 font-size : 2rem;
-               }
-             }
      
              .loading__letter:nth-child(2) {
                  animation-delay: .1s;
