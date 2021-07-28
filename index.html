@@ -180,6 +180,11 @@
     window.addEventListener('message', event=>{
         if(event.data === "loaded"){
             loadingScreenOff()
+            return
+        }
+        if(event.data.indexOf('http')===0){
+            window.location.href = event.data
+            return
         }
     })
     
